@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ccc;
+    background-color: #303030;
+    margin: 1em;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.top-banner {
+    display: flex;
+}
+
+ul {
+    display: flex;
+}
+
+.links {
+    text-decoration: none;
+    color: #ccc;
+    background-color: #707070;
+    border-radius: .5em;
+    padding: .5em;
+    margin-right: 1em;
+    box-shadow: 0 .25em 0 #303030;
+    
+}
+
+/* Define secion styles */
+.top-banner, .main-content {
+    background-color: #505050;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    box-shadow: 0 .5em 0 #202020;
+    /* box-shadow: 0 1em 1em #202020; */
+}
