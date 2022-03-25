@@ -11,6 +11,7 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: xx-large;
+    text-shadow: 0 2px #202020;
 }
 
 h2 {
@@ -27,6 +28,8 @@ p {
 
 ul {
     display: flex;
+    flex-direction:unset;
+    flex-wrap: wrap;
 }
 
 .links {
@@ -37,7 +40,6 @@ ul {
     padding: .5em;
     margin-right: 1em;
     box-shadow: 0 .25em 0 #303030;
-    
 }
 
 /* Define secion styles */
