@@ -1,11 +1,21 @@
+/* Pre-defining some text and background colors */
 :root {
+    /* text color variable */
+    --text-white: #ccc;
+    /* background color variables */
+    --background-darkgrey: #303030;
+    --background-medgrey: #505050;
+    --background-medligrey: #707070;
+    /* box-shadow variables */
     --text-shadow-header: 0 .25em .25em #202020;
+    --container-shadow: 0 .5em .5em #202020;
+    --button-shadow: 0 .25em .25em #303030;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #ccc;
-    background-color: #303030;
+    color: var(--text-white);
+    background-color: var(--background-darkgrey);
     margin: 1em;
 }
 
@@ -14,31 +24,31 @@ h1, h2, h3, h4 {
     text-shadow: var(--text-shadow-header);
 }
 
+/* Setup entire sorting structure for information chunks */
 main {
     display: inline-block;
-    /* justify-content: center; */
     align-items: center;
 }
 
 /* Define secion chunk's styles */
-.top-banner, .main-content {
-    background-color: #505050;
+.top-banner, article, .kevin-pic {
+    background-color: var(--background-medgrey);
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 1em;
-    box-shadow: 0 .5em .5em #202020;
+    box-shadow: var(--container-shadow);
     /* box-shadow: 0 1em 1em #202020; */
 }
 
 /* Top navigation BUTTONS styling */
 .links {
     text-decoration: none;
-    color: #ccc;
-    background-color: #707070;
+    color: var(--text-white);
+    background-color: var(--background-medligrey);
     border-radius: .5em;
     padding: .5em;
     margin-right: 1em;
-    box-shadow: 0 .25em .25em #303030;
+    box-shadow: var(--button-shadow);
 }
 
 /* top navigation, set spacing */
@@ -53,6 +63,14 @@ main {
 .links-group {
     display: inline-flex;
     align-items: center;
+}
+
+/* .kevin-pic {
+    box-shadow: inset 0 0 1em #202020;
+} */
+
+.kevin-pic, img {
+    width: 50em;
 }
 
 h1 {
