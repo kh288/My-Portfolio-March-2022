@@ -31,6 +31,7 @@ main {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    margin: auto;
 }
 
 /* Define secion chunk's styles */
@@ -57,6 +58,8 @@ main {
 /* top navigation, set spacing */
 .top-banner {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -68,13 +71,23 @@ main {
 
 .kevin-pic, img {
     width: 23em;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 1em;
 }
 
+/* resume grid tiles container */
 .my-work {
     width: 100%;
     display: grid;
     column-gap: 1em;
-    grid-template-columns: repeat(3, calc(var(--one-third) - .5em));
+    grid-template-columns: repeat(3, 1fr);
+    /* my sweaty tryhard implementation that was nullified by 1fr */
+    /* grid-template-columns: repeat(3, calc(var(--one-third) - 11px)); */
+}
+
+.work-tile {
+    border: solid var(--text-white);
 }
 
 .site-icon {
@@ -93,3 +106,23 @@ h2 {
 p {
     line-height: 1.5em;
 }
+
+@media (min-width: 900px) {
+    main {
+        width: 870px;
+    }
+}
+
+@media (max-width: 621px) {
+    main {
+        width: 100%;
+    }
+    .top-banner {
+        justify-content: center;
+    }
+    .links-group {
+        padding-top: 1.5em;
+        padding-bottom: .5em;
+    }
+}
+
