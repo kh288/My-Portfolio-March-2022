@@ -10,8 +10,6 @@
     --text-shadow-header: 0 .25em .25em #202020;
     --container-shadow: 0 .5em .5em #202020;
     --button-shadow: 0 .25em .25em #303030;
-    /* Cleanly pre-defining 33.333% for grid */
-    --one-third: calc(100% / 3);
 }
 
 body {
@@ -78,13 +76,43 @@ img {
     width: 100%;
     display: grid;
     column-gap: 1em;
-    grid-template-columns: repeat(3, 1fr);
-    /* my sweaty tryhard implementation that was nullified by 1fr */
-    /* grid-template-columns: repeat(3, calc(var(--one-third) - 11px)); */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#geek-squad {
+    background: url("../images/previews/geek-squad.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#freelance {
+    background: url("../images/previews/desk.webp");
+    background-size: cover;
+}
+
+#hancock {
+    background: url("../images/previews/hancock-college.jpg");
+    background-size: cover;
+}
+
+#pc-enth {
+    background: url("../images/previews/pc-building.jpg");
+    background-size: cover;
 }
 
 .work-tile {
     border: solid var(--text-white);
+    height: 200px;
+    background-color: var(--background-medgrey);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text-box {
+    background-color:#505050CC;
+    padding: .5em;
+    width: fit-content;
+    border-radius: .5em;
 }
 
 .site-icon {
