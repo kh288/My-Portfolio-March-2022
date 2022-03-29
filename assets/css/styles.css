@@ -19,9 +19,8 @@ body {
     margin: 1em;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
     font-weight: bold;
-    text-shadow: var(--text-shadow-header);
 }
 
 /* Setup entire sorting structure for information chunks */
@@ -33,17 +32,19 @@ main {
 }
 
 /* Define secion chunk's styles */
-.top-banner, article, .kevin-pic, .work-tile {
+.top-banner, article, footer, .mern-stack, .work-tile, #kevin-pic {
     background-color: var(--background-medgrey);
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 1em;
     box-shadow: var(--container-shadow);
+    transition: all .25s ease-in-out;
+    text-align: center;
     /* box-shadow: 0 1em 1em #202020; */
 }
 
 /* Top navigation BUTTONS styling */
-.links {
+.links, .site-icon {
     text-decoration: none;
     color: var(--text-white);
     background-color: var(--background-medligrey);
@@ -67,8 +68,20 @@ main {
     align-items: center;
 }
 
-img {
-    width: 100%;
+a {
+    text-decoration: none;
+    color: #ccc;
+
+}
+
+.mern-stack {
+    height: 450px;
+    border: 2px solid var(--text-white);
+    background: url("../images/previews/mern-stack.png");
+    background-color: var(--background-medgrey);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* resume grid tiles container */
@@ -101,11 +114,15 @@ img {
 }
 
 .work-tile {
-    border: solid var(--text-white);
+    border: 2px solid var(--text-white);
     height: 200px;
     background-color: var(--background-medgrey);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.mern-stack:hover, #geek-squad:hover, #freelance:hover, #hancock:hover, #pc-enth:hover {
+    box-shadow: 0 0 1em #ccc;
 }
 
 .text-box {
@@ -116,7 +133,7 @@ img {
 }
 
 .site-icon {
-    padding-right: 1em;
+    /* padding-right: 1em; */
     width: 4em;
 }
 
@@ -134,13 +151,13 @@ p {
 
 @media (min-width: 960px) {
     main {
-        width: calc(960px - 2em);
+        width: 960px;
     }
 }
 
 @media (max-width: 620px) {
     main {
-        width: calc(100% - 2em);
+        width: 100%;
     }
     .top-banner {
         justify-content: center;
