@@ -69,11 +69,8 @@ main {
     align-items: center;
 }
 
-.kevin-pic, img {
-    width: 23em;
-    justify-content: center;
-    margin: auto;
-    margin-bottom: 1em;
+img {
+    width: 100%;
 }
 
 /* resume grid tiles container */
@@ -107,15 +104,15 @@ p {
     line-height: 1.5em;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
     main {
-        width: 870px;
+        width: calc(960px - 2em);
     }
 }
 
-@media (max-width: 621px) {
+@media (max-width: 620px) {
     main {
-        width: 100%;
+        width: calc(100% - 2em);
     }
     .top-banner {
         justify-content: center;
