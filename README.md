@@ -22,3 +22,5 @@ Example of Window highlighting
 This site has some great useful items in it that I think are great!
 
 https://kh288.github.io/My-Portfolio/
+
+[LICENSE](/LICENSE.txt)
