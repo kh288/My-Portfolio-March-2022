@@ -12,6 +12,7 @@
     --button-shadow: 0 .25em .25em #303030;
 }
 
+/* Assign generic stylings to everything */
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text-white);
@@ -19,6 +20,7 @@ body {
     margin: 1em;
 }
 
+/* re-set header properties */
 h1, h2 {
     font-weight: bold;
 }
@@ -40,7 +42,6 @@ main {
     box-shadow: var(--container-shadow);
     transition: all .25s ease-in-out;
     text-align: center;
-    /* box-shadow: 0 1em 1em #202020; */
 }
 
 /* Top navigation BUTTONS styling */
@@ -68,12 +69,13 @@ main {
     align-items: center;
 }
 
+/* remove link stylings */
 a {
     text-decoration: none;
-    color: #ccc;
-
+    color: var(--text-white);
 }
 
+/* MERN Stack container link */
 .mern-stack {
     height: 450px;
     border: 2px solid var(--text-white);
@@ -92,6 +94,16 @@ a {
     grid-template-columns: repeat(2, 1fr);
 }
 
+/* Container cell for the main worked at links */
+.work-tile {
+    border: 2px solid var(--text-white);
+    height: 200px;
+    background-color: var(--background-medgrey);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 #geek-squad {
     background: url("../images/previews/geek-squad.jpg");
     background-position: center;
@@ -100,31 +112,27 @@ a {
 
 #freelance {
     background: url("../images/previews/desk.webp");
+    background-position: center;
     background-size: cover;
 }
 
 #hancock {
     background: url("../images/previews/hancock-college.jpg");
+    background-position: center;
     background-size: cover;
 }
 
 #pc-enth {
     background: url("../images/previews/pc-building.jpg");
+    background-position: center;
     background-size: cover;
 }
 
-.work-tile {
-    border: 2px solid var(--text-white);
-    height: 200px;
-    background-color: var(--background-medgrey);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
+/* mouseover glow */
 .mern-stack:hover, #geek-squad:hover, #freelance:hover, #hancock:hover, #pc-enth:hover {
-    box-shadow: 0 0 1em #ccc;
+    box-shadow: 0 0 1em var(--text-white);
 }
-
+/* text above all the the job containers */
 .text-box {
     background-color:#505050CC;
     padding: .5em;
@@ -132,8 +140,8 @@ a {
     border-radius: .5em;
 }
 
+/* website links set size */
 .site-icon {
-    /* padding-right: 1em; */
     width: 4em;
 }
 
@@ -149,12 +157,14 @@ p {
     line-height: 1.5em;
 }
 
+/* maximum width for content 960px or above */
 @media (min-width: 960px) {
     main {
-        width: 960px;
+        width: calc(960px - 1em);
     }
 }
 
+/* maximum width for content 620px or above */
 @media (max-width: 620px) {
     main {
         width: 100%;
